@@ -1,0 +1,276 @@
+/*Links do .cbp-ig-grid*/
+
+/*cbp ig grid início */
+.cbp-ig-grid {
+    list-style: none;
+    padding: 8px 0 20px 0;
+    margin: 0;
+    margin-top: -18px;
+}
+.cbp-ig-grid:before, .cbp-ig-grid:after{
+    content: "";
+    display: table;
+}
+  
+.cbp-ig-grid:after{
+    clear: both;
+}
+
+/*Item na Grid*/
+  
+.cbp-ig-grid li{
+    width: 14%;
+    float: left;
+    height: 160px;
+    text-align: center;
+}
+  
+.cbp-ig-grid img{
+    width: 60px;
+    height: 50px;
+}
+ 
+.cbp-ig-grid li > a{
+    display: block;
+    height: 100%;
+    color: #006B43;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+  
+.cbp-ig-icon{
+    padding: 30px 0 0 0;
+    display: block;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+}
+  
+.cbp-ig-icon:before{
+    font-family: 'anyoldicon';
+    font-size: 14em;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+  
+.cbp-ig-grid .cbp-ig-title {
+    margin: 25px 0 10px 0;
+    padding: 2px 0 0 0;
+    font-size: 0.9em;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+/*Linha verde que se move*/
+.cbp-ig-grid .cbp-ig-title:before {
+  content: '';
+  position: absolute;
+  background: #006B43;
+  width: 150px;
+  height: 3px;
+  top: 0px;
+  left: 50%;
+  margin: -10px 0 0 -75px;
+  -webkit-transition: margin-top 0.2s;
+  -moz-transition: margin-top 0.2s;
+  transition: margin-top 0.2s;
+}
+
+.cbp-ig-grid .cbp-ig-category {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1em;
+  letter-spacing: 1px;
+  color: #fff;
+  -webkit-transform: translateY(10px);
+  -moz-transform: -moz-translateY(10px);
+  -ms-transform: -ms-translateY(10px);
+  transform: translateY(10px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  -webkit-transition: transform 0.3s, opacity 0.2s;
+}
+
+.cbp-ig-grid li > a:hover{
+    background: #006B43;
+}
+  
+.cbp-ig-grid li >a:hover .cbp-ig-icon {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
+  
+/*Irá mudar a cor do título quando mouse estiver em cima do icone ou título*/
+.cbp-ig-grid li > a:hover .cbp-ig-icon:before,
+  .cbp-ig-grid li > a:hover .cbp-ig-title{
+    color: #fff;
+}
+
+/*Irá movimentar o nome para cima*/
+
+  .cbp-ig-grid li > a:hover .cbp-ig-title{
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+/*Irá fazer a barra mudar de cor e descer, quando o título subir*/
+
+.cbp-ig-grid li > a:hover .cbp-ig-title:before{
+    background: #fff;
+    margin-top: 30px;
+}
+
+.cbp-ig-title {
+    color: #006B43;
+    align-content: center;
+    font-size: 12px;
+}
+
+.cbp-ig-grid li > a:hover img{
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+ 
+/*Fim do Links do .cbp-ig-grid*/
+
+/*Fim do links rápidos*/
+
+@media screen and (max-width: 62.75em){
+    
+    body{
+        overflow-x: hidden;
+    }
+    
+    .menu-superior{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:  #0000007e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 150;
+    }
+
+    .menu-superior li{
+        opacity: 0;
+    }
+
+    .coluna {
+        width: 100%;
+        height: auto;
+    }
+
+    .burguer{
+        display: block;
+    }
+
+    .search-box:hover > .search-txt{
+        width: 140px;
+        padding: 0 6px;
+    }
+
+    .footer-links-redes-campus ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cbp-ig-grid li {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 55.6em) {
+
+    .search-box:hover > .search-txt{
+        width: 100px;
+        padding: 0 6px;
+    }
+    
+    .footer-informacoes{
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 41.6em) { 
+
+    .search-box:hover > .search-txt{
+        width: 70px;
+        padding: 0 6px;
+    }
+
+    .cbp-ig-grid li {
+        width: 50%;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 36em) { 
+    
+    .search-box:hover > .search-txt{
+        width: 50px;
+        padding: 0 6px;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+        
+    }
+
+}
+
+@media screen and (max-width: 31.6em) { 
+    
+    .menu-inferior ul li{
+        bottom: .5rem;
+    }
+
+    .cbp-ig-grid {
+        font-size: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 25em) { 
+    
+    .cbp-ig-grid li {
+        width: 50%;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+    }
+}
+/*responsável pale transição do menu sanduíche*/
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

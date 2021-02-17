@@ -1,0 +1,76 @@
+/*Footer*/
+footer{
+    grid-area: footer;
+
+}
+.footer-rodape1{
+    background: #006a20;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-links-redes-campus ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+}
+.foto-footer-links-redes-campus img{
+    width: auto;
+    height: 55px;
+}
+.footer-rodape2{
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    background-color: #019934;
+    color: #ffffff;
+    font-size: 13px;
+    padding: .5rem;
+}
+
+/*Footer Instituto*/
+.instituto{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*Fim Footer Instituto*/
+
+/*Footer-redes sociais*/
+.links-redes-sociais li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+}
+.footer-icon-redes-sociais{
+    color: white;
+}
+/*Footer-redes sociais*/
+
+/*.footer-informacoes*/
+.footer-informacoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+/*Fim .footer-informacoes*/
+
+@media screen and (max-width: 62.75em){
+
+    .footer-links-redes-campus ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width: 55.6em) {
+    
+    .footer-informacoes{
+        text-align: center;
+        flex-direction: column;
+    }
+}
