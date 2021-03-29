@@ -20,54 +20,34 @@
 
     <div class="Resultado-Conteiner">
         <?php
-        /*
-            $con = new PDO("mysql:host=localhost; dbname=intranet", 'root', '');
+        
+            if (isset($_GET['submit'])) {
 
-            if(isset($_POST['search-text'])){
-                $search =   $_POST['search-text'];
-                $sth = $con->prepare("SELECT * FROM `search-text` WHERE {{ $noticia->titulo }} LIKE '%$search%'");
+                $searchValue = $_GET['search-txt'];
 
-                $sth -> setFetchMode(PDO:: FETCH_OBJ);
-                $sth -> execute();
-                
-                if($row = $sth->fetch()){
-                    echo "
-                        <div class="item" id="noticia1">
-                    
-                            <div class="image">
-                                <img class="noticias-imagem" src = "{{ $noticia->imagem }}">
-                            </div>
-                    
-                            <div class="titulo">
-                                <b>{{ $noticia->titulo }}</b>
-                            </div>
+                $con = new mysqli("localhost", "root", "", "intranet");
 
-                            <div class="conteudo">
-                                {{ $noticia->conteudo }}
-                            </div>
-                    
-                            <div class="tag">
-                                <h3>{{ $noticia->tag }}</h3>
-                            </div>
-                    
-                            <div class="descricao">
-                                <b>{{ $noticia->descricao }}</b>
-                            </div>
+                if ($con->connect_error) {
 
-                            <div class="botao">
-                                <a href="{{ $noticia->link}}" target="_blank" class="button button1"><b>Saiba mais</b></a>
-                            </div>
-                    
+                    echo "connection Failed: " . $con->connect_error;
+                } else {
 
-                        </div>";
+                    $sql = "SELECT * FROM noticias WHERE titulo LIKE '%$searchValue%' OR tag LIKE '%$searchValue%'";
+
+                    $result = $con->query($sql);
+                    while ($row = $result->fetch_assoc()) {
+                    echo $row['titulo'] . "<br>";
+                    echo $row['tag'] . "<br>";
+                    echo $row['descricao'] . "<br>";
+                    echo $row['conteudo'] . "<br>";
                 }
-                else{
-                    echo "Desculpe, não existe resultados compatíveis, tente novamente";
-                }
-            }
-            */
+
+      
+    }   
+}
+
             ///////////////////////////////////////////////////////////////////////////////////
-            if(isset($_POST['search-text'])){
+            /*if(isset($_POST['search-text'])){
 
                 $search =  mysqli_real_escape_string($conn, $_POST['']);
 
