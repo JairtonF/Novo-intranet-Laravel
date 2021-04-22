@@ -16,6 +16,8 @@ class HomeController extends Controller
     }
 
     public function showPage() {
+
+
         $noticias = $this->noticiaRepository->getAll(5);
         return view("pages.home", compact('noticias'));
     }

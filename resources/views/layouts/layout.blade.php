@@ -20,6 +20,7 @@
     <script src="{{ asset('assets/js/trocarPlanoDeFundo.js') }}"></script>
     <script src="{{ asset('assets/js/BarraDePesquisa.js') }}"></script>
     <script src="{{ asset('assets/js/modal.js') }}"></script>
+    <script type="text/javascript" src="{{asset('js/semantic.min.js')}}"></script>
     
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -226,11 +227,14 @@
                     </li>
                         
                     <li>
+                        
                         <!--Barra de pesquisa-->
                         <!--Adicionado action e method e trocado div pelo form-->
-                        <form class="search-box" action="{{route ('pages.pesquisa')}}" method="GET">
+
+                        <form class="search-box" action="/" method="GET">
 
                             <!--Adicionado name "search-txt"-->
+
                             <input type="text" class="search-txt" name="search-txt" placeholder="Pesquisar..." id="search-txt"  onkeyup="searchFunction()"  onfocus="this.value=''">
                             
                             <a class="search-button" href="#">

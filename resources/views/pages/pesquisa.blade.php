@@ -14,38 +14,18 @@
 
 @section('content')
 
-    <h2>Pesquisa</h2>
-        
-    <hr style="height:2px;border-width:0;color:#006B43;background-color:#006B43; width: 90%">
-
     <div class="Resultado-Conteiner">
+
+
+        <div class="noticias">
+
+            <h2>Resultado</h2>
+            
+            <hr style="height:2px;border-width:0;color:#006B43;background-color:#006B43; width: 90%">
+
         <?php
         
-            if (isset($_GET['submit'])) {
-
-                $searchValue = $_GET['search-txt'];
-
-                $con = new mysqli("localhost", "root", "", "intranet");
-
-                if ($con->connect_error) {
-
-                    echo "connection Failed: " . $con->connect_error;
-                } else {
-
-                    $sql = "SELECT * FROM noticias WHERE titulo LIKE '%$searchValue%' OR tag LIKE '%$searchValue%'";
-
-                    $result = $con->query($sql);
-                    while ($row = $result->fetch_assoc()) {
-                    echo $row['titulo'] . "<br>";
-                    echo $row['tag'] . "<br>";
-                    echo $row['descricao'] . "<br>";
-                    echo $row['conteudo'] . "<br>";
-                }
-
-      
-    }   
-}
-
+            
             ///////////////////////////////////////////////////////////////////////////////////
             /*if(isset($_POST['search-text'])){
 
