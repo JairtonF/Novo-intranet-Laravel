@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class RamaisController extends Controller
 {
@@ -18,7 +19,7 @@ class RamaisController extends Controller
         
         $user_search = 0;
 
-        return view('ramais/index', compact('response'));
+        return view('pages/ramais', compact('response'));
     }
 
     public function search(Request $search)
@@ -42,7 +43,7 @@ class RamaisController extends Controller
             $response = cache('response');
         }
 
-        return view('ramais/index', compact('response', 'user_search'));
+        return view('pages/ramais', compact('response', 'user_search'));
     }
 
     public function save_cache()

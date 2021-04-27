@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RamaisController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,16 +25,10 @@ Route::get('/pesquisa', [PostController::class, "index"]);
 
 // #######################*ROTAS-RAMAIS*#########################
 
-Route::group(['prefix' => 'ramais'], function () {
-    Route::get('/', 'RamaisController@index');
-    Route::post('/', 'RamaisController@search');
-});
+Route::get('/ramais', [RamaisController::class, "index"]);
 
-// #######################*ROTAS-RAMAIS-SIMPLES*#########################
-Route::get('/ramais', function()
-{
-    return view('pages.ramais');
-})->name('pages.ramais');
+Route::post('/ramais', [RamaisController::class, "search"]);
+
 
 // #######################*ROTAS-PESQUISA*#########################
 Route::get('/pesquisa', function()

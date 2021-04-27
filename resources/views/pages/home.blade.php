@@ -265,7 +265,7 @@
 
                     <li> 
 
-                        <a href="{{route ('pages.ramais')}}">
+                        <a href="/ramais">
 
                             <span class="cbp-ig-icon">
 
