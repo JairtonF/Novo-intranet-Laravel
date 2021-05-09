@@ -36,3 +36,7 @@ Route::get('/pesquisa', function()
     return view('pages.pesquisa');
 })->name('pages.pesquisa');
 
+// #######################*ROTAS-TESTE*#########################
+
+Route::view('/teste', 'pages.teste');
+

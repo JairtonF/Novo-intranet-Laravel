@@ -740,65 +740,65 @@
 
             <!-------------------------------------------------Visualiar Modal ---------------------------------------------->
  
-@foreach( $noticias as $noticia )
+        @foreach( $noticias as $noticia )
 
-<div class="modal fade" id="noticiaModal-{{ $noticia->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="noticiaModal-{{ $noticia->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     
-    <div class="modal-dialog" role="document">
+            <div class="modal-dialog" role="document">
 
-        <div class="modal-content">
+                <div class="modal-content">
 
-            <div class="modal-header">
+                    <div class="modal-header">
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
-                    <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
 
-                </button>
+                        </button>
 
-            </div>
+                    </div>
 
-            <div class="modal-body">
+                    <div class="modal-body">
 
-                <div class="image">
+                        <div class="image">
 
-                    <img class="noticias-imagem" src = "{{ $noticia->imagem }}">
+                            <img class="noticias-imagem" src = "{{ $noticia->imagem }}">
     
-                </div>
+                        </div>
     
-                <div class="titulo">
+                        <div class="titulo">
     
-                    <b>{{ $noticia->titulo }}</b>
+                            <b>{{ $noticia->titulo }}</b>
     
-                </div>
+                        </div>
 
-                <div class="tag">
+                        <div class="tag">
     
-                    <h3>{{ $noticia->tag }}</h3>
+                            <h3>{{ $noticia->tag }}</h3>
     
-                </div>
+                        </div>
 
-                <div class="conteudo">
+                        <div class="conteudo">
     
-                    {{ $noticia->conteudo }}
+                            {{ $noticia->conteudo }}
     
-                </div>
+                        </div>
     
-                <div class="descricao">
+                        <div class="descricao">
     
-                    <b>{{ $noticia->descricao }}</b>
+                            <b>{{ $noticia->descricao }}</b>
     
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</div>
-
-@endforeach
+        @endforeach
 
 <!----------------------------------------------- Fim do Modal-------------------------------------------->
 

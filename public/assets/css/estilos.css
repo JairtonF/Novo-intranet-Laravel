@@ -37,9 +37,36 @@ nav{
 nav ul{
     margin: 0;
 }
+
+nav img{
+    padding: 5px;
+    width: auto;
+    height: 55%;
+}
+
+/*Semantic interfere no posicionamento do nav, então em algumas páginas foi criada a classe "nav"*/
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 20px;
+    height: 6rem;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgb(0, 0, 0, 1));
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav img{
+    padding: 5px;
+    width: auto;
+    height: 65%;
+}
+
 /*-----------------------------------------------------------------------*/
 .menu-superior li{
-    display: flex;
     list-style: none;
     display: inline-block;
 }
@@ -164,11 +191,6 @@ nav ul{
 }
 /*Fim da Barra de pesquisa*/
 
-nav img{
-    padding: 5px;
-    width: auto;
-    height: 55%;
-}
 /*Ícone menu sanduíche*/
 .burguer {
     margin-top: 1rem;

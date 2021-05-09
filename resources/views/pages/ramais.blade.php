@@ -1,18 +1,35 @@
-@extends("layouts.layout")
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-@section('header-stylesheet')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/estilos.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('assets/css/estilos-footer.css') }}">
 
     <link rel="stylesheet" href="{{ asset('assets/css/ramais/estilos-ramais.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     
-@endsection
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
 
-@section('header-scripts')
-   
-@endsection
+    <script src="{{ asset('assets/js/tabs.js') }}"></script>
 
-@section('content')
+</head>
+
+<body>
+
+    @extends('layouts.navbar')
+
+    @section('navbar')
+
+    
 
     <div class="ui container" id="containerSlide"></div>
 
@@ -112,8 +129,12 @@
         </table>
     </div>
 
-@endsection
+    @endsection
+    
+    @section('footer')
 
-@section('footer-scripts')
-    <script src="{{ asset('assets/js/tabs.js') }}"></script>
-@endsection
+    @endsection
+
+</body>
+
+</html>
