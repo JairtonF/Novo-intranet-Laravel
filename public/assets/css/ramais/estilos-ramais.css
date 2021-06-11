@@ -88,6 +88,10 @@ p, a {
     justify-content: space-around;
   }
   
+  .ui.container{
+    margin: 1rem;
+  }
+
   .ui.table {
     margin: 0 !important;
   }

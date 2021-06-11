@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/ramais/estilos-ramais.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
 
@@ -28,10 +26,6 @@
     @extends('layouts.navbar')
 
     @section('navbar')
-
-    
-
-    <div class="ui container" id="containerSlide"></div>
 
 
     <div class="ui container" id="containerLinksAndNoticies">

@@ -195,13 +195,14 @@
                     
                     <!--Barra de pesquisa-->
                     <!--Adicionado action e method e trocado div pelo form-->
+                    <form class="search-box" action="{{url('/pesquisa')}}" method="GET">
 
-                    <form class="search-box" action="/" method="GET">
+                        {{ csrf_field() }}
 
                         <!--Adicionado name "search-txt"-->
 
-                        <input type="text" class="search-txt" name="search-txt" placeholder="Pesquisar..." id="search-txt"  onkeyup="searchFunction()"  onfocus="this.value=''">
-                        
+                        <input type="text" class="search-txt" name="search" id="search"  placeholder="Pesquisar..." >
+                            
                         <a class="search-button" href="#">
 
                             <i class="fas fa-search"></i>
@@ -211,6 +212,7 @@
                     </form>
                     <!--Fim da barra de pesquisa-->
                 </li>
+            
             </ul>
             <!--Menu responsivo-->
             <div class="burguer">

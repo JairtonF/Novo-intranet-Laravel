@@ -1,18 +1,32 @@
-@extends("layouts.layout")
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-@section('title')
-    Bem Vindo
-@endsection
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 
-@section('header-stylesheet')
+    <link rel="stylesheet" href="{{ asset('assets/css/estilos.css') }}">
 
-@endsection
+    <link rel="stylesheet" href="{{ asset('assets/css/estilos-links-rapidos.css') }}">
 
-@section('header-scripts')
+    <link rel="stylesheet" href="{{ asset('assets/css/estilos-noticias.css') }}">
     
-@endsection
+    <link rel="stylesheet" href="{{ asset('assets/css/estilos-footer.css') }}">
+    
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
 
-@section('content')
+    
+
+</head>
+
+<body>
+    
+
+    @extends('layouts.navbar')
+
+    @section('navbar')
 
     <div class="Resultado-Conteiner">
 
@@ -23,62 +37,60 @@
             
             <hr style="height:2px;border-width:0;color:#006B43;background-color:#006B43; width: 90%">
 
-        <?php
-        
+            <br>
+            @if (isset($pesquisa ))
+
+                @foreach($pesquisa as $pesquisa)
+    
+                    <div class="links-rapidos" id="links-rapidos">
+                
+                        <ul class="cbp-ig-grid">
+                
+                            <li>
+                
+                                <a href="{{ $pesquisa->link }}" target="_blank">
             
-            ///////////////////////////////////////////////////////////////////////////////////
-            /*if(isset($_POST['search-text'])){
-
-                $search =  mysqli_real_escape_string($conn, $_POST['']);
-
-                $sql = "SELECT * FROM noticias WHERE {{ $noticia->titulo }} LIKE '%$search%' OR {{ $noticia->conteudo }} LIKE '%$search%' OR {{ $noticia->tag }} LIKE '%$search%' OR {{ $noticia->descricao }} LIKE '%$search%'"
+                                    <span class="cbp-ig-icon">
+            
+                                        <img src="{{ $pesquisa->caminho_imagem }}">
+                                                
+                                    </span>
                 
-                $result = mysqli_query($conn, $sql);
+                                    <h3 class="cbp-ig-title">
+                                        
+                                        <b>{{ $pesquisa->titulo }}</b>
                 
-                $queryResult = mysqli_num_rows($result);
+                                    </h3>
+                
+                                </a>
+                
+                            </li>
+                        
+                        </ul>
+                
+                    </div>
+        
+                @endforeach
+                
+            @else
+                
+                <h1>Não foi possível achar resultados</h1>
+                
+            @endif
+                   
+        
+        </div>
 
-                if($queryResult > 0){
-                    while($row =mysqli_fetch_assoc($result)){
-                        echo "
-                        <div class="item" id="noticia1">
-                    
-                            <div class="image">
-                                <img class="noticias-imagem" src = "{{ $noticia->imagem }}">
-                            </div>
-                    
-                            <div class="titulo">
-                                <b>{{ $noticia->titulo }}</b>
-                            </div>
 
-                            <div class="conteudo">
-                                {{ $noticia->conteudo }}
-                            </div>
-                    
-                            <div class="tag">
-                                <h3>{{ $noticia->tag }}</h3>
-                            </div>
-                    
-                            <div class="descricao">
-                                <b>{{ $noticia->descricao }}</b>
-                            </div>
-
-                            <div class="botao">
-                                <a href="{{ $noticia->link}}" target="_blank" class="button button1"><b>Saiba mais</b></a>
-                            </div>
-                    
-
-                        </div>";
-                    }
-                } else {
-                    echo "Desculpe, não existe resultados compatíveis, tente novamente";
-                }
-            }*/
-        ?>
 
     </div>
 
-@endsection
+    @endsection
 
-@section('footer-scripts')
-    <script src="{{ asset('assets/js/tabs.js') }}"></script>
-@endsection
+    @section('footer')
+
+    @endsection
+
+</body>
+
+</html>
