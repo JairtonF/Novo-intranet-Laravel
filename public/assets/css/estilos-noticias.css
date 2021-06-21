@@ -7,8 +7,9 @@
 .noticias h2 {
     display: block;
     position: relative;
-    margin: auto 80px;
+    margin: auto 6rem;
     color: #006B43;
+    padding: 1rem;
 }
 
 .item{
@@ -39,7 +40,7 @@
 }
 
 .noticias-imagem{
-    width: auto;
+    width: 17rem;
     height: 15rem;
     margin: 1rem;
 }

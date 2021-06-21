@@ -233,7 +233,7 @@
 
                     <li> 
 
-                        <a href="#">
+                        <a href="http://avisos.maracanau.ifce.edu.br/" target="_blank">
 
                             <span class="cbp-ig-icon">
 
@@ -281,7 +281,7 @@
 
                     <li> 
 
-                        <a href="#">
+                        <a href="https://ifce.edu.br/maracanau/menu/calendario-letivo" target="_blank">
 
                             <span class="cbp-ig-icon">
 
@@ -601,7 +601,7 @@
 
                 <li> 
 
-                    <a href="#">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFhh7JNAaslMVP0jV8ykfQfSDftORky4O1q54clStuzFHWtw/viewform" target="_blank">
                         
                         <span class="cbp-ig-icon">
 
@@ -609,7 +609,7 @@
 
                         </span>
 
-                        <h3 class="cbp-ig-title">Requisições</h3>
+                        <h3 class="cbp-ig-title">Form de Requisições</h3>
 
                     </a> 
 

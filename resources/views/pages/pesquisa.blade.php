@@ -17,8 +17,6 @@
     
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
 
-    
-
 </head>
 
 <body>
@@ -38,43 +36,84 @@
             <hr style="height:2px;border-width:0;color:#006B43;background-color:#006B43; width: 90%">
 
             <br>
-            @if (isset($pesquisa ))
 
-                @foreach($pesquisa as $pesquisa)
-    
-                    <div class="links-rapidos" id="links-rapidos">
+            @if (count($pesquisa) != 0 || count($result) != 0)
+
+                <ul class="cbp-ig-grid">
+
+                    @foreach($pesquisa as $pesquisa)
+                    
+                        <li>
                 
-                        <ul class="cbp-ig-grid">
-                
-                            <li>
-                
-                                <a href="{{ $pesquisa->link }}" target="_blank">
+                            <a href="{{ $pesquisa->link }}" target="_blank">
             
-                                    <span class="cbp-ig-icon">
+                                <span class="cbp-ig-icon">
             
-                                        <img src="{{ $pesquisa->caminho_imagem }}">
+                                    <img src="{{ $pesquisa->caminho_imagem }}">
                                                 
-                                    </span>
+                                </span>
                 
-                                    <h3 class="cbp-ig-title">
+                                <h3 class="cbp-ig-title">
                                         
-                                        <b>{{ $pesquisa->titulo }}</b>
+                                    <b>{{ $pesquisa->titulo }}</b>
                 
-                                    </h3>
+                                </h3>
                 
-                                </a>
+                            </a>
                 
-                            </li>
-                        
-                        </ul>
-                
-                    </div>
+                        </li>
         
+                    @endforeach
+
+                </ul>
+
+                @foreach($result as $result)
+
+                <div class="item" id="noticia1">
+                    
+                    <div class="image">
+                    
+                        <img class="noticias-imagem" src = "{{ $result->imagem }}">
+                    
+                    </div>
+                    
+                    <div class="titulo">
+                    
+                        <b>{{ $result->titulo }}</b>
+                    
+                    </div>
+
+                    <div class="conteudo">
+                    
+                        {{ $result->conteudo }}
+                    
+                    </div>
+                    
+                    <div class="tag">
+                    
+                        <h3>{{ $result->tag }}</h3>
+                    
+                    </div>
+                    
+                    <div class="descricao">
+                    
+                        <b>{{ $result->descricao }}</b>
+                    
+                    </div>
+
+                    <div class="botao">
+                       
+                        <button type="button" class="button button1 view_data" data-toggle="modal" data-target="#noticiaModal-{{ $result->id }}">Saiba mais</button>
+                    
+                    </div>
+
+                </div>
+
                 @endforeach
-                
+
             @else
                 
-                <h1>Não foi possível achar resultados</h1>
+                <h2>Desculpe, não foi possível achar resultados compatíveis com a pesquisa</h2>
                 
             @endif
                    

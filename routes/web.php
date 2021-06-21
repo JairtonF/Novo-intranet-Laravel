@@ -19,8 +19,6 @@ use App\Http\Controllers\PesquisaController;
 
 Route::get('/', [HomeController::class, "showPage"]);
 
-//Criação do metodo Post controller para mostrar as noticias no pesquisa.php
-//Route::get('/pesquisa', [PostController::class, "index"]);
 
 // #######################*ROTAS-RAMAIS*#########################
 
